@@ -30,6 +30,8 @@ y = NFLdata['hScore'] + NFLdata['vScore']
 
 b0, b1 = lr.estimate_coef(x, y)
 print(b0, b1)
+m_x = np.mean(x)
+std_x = np.std(x)
 
 histAx = np.linspace(10,90)
 plt.hist(x, alpha = 0.35, label='line', bins=20)
@@ -50,3 +52,17 @@ plt.ylabel('home score-visit score')
 plt.hlines(y=0, xmin=30, xmax=60, color='orange')
 plt.grid()
 
+bank = 0
+winCount = 0
+loseCount = 0
+for i in range (n):
+  if x[i] > 53.5:
+    if y[i] > x[i]:
+      bank += 300
+      winCount += 1
+    else:
+      bank += 330
+      loseCount += 1
+    if x[i] < 32.5:
+      if y[i] < x[i]:
+        bank +=300
