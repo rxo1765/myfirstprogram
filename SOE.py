@@ -1,7 +1,8 @@
 import numpy as np
 import sys
 
-A = np.array([[1,2],
+A = np.array([[2,3,-4],
+              [1,-2,
               [3,4]])
 
 print(A)
