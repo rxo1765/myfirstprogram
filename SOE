@@ -1,0 +1,28 @@
+import numpy as np
+
+A = np.array([[1,2],
+              [3,4]])
+
+print(A)
+type(A)
+A.shape
+
+'''
+system of equations:
+suppose x1 =5, and x2 =1 then
+  1*x1 + 2*x2 = 9
+  3*x1 + 4*x2 = 19
+
+A@x = b
+A.inv @ A @x =  A.inv @ b
+'''
+
+b =np.array([ [9],
+             [19]])
+
+## solve equations
+
+detA = np.linalg.det(A)
+print (detA)
+
+A.inv()
