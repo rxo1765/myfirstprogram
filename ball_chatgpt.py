@@ -5,6 +5,7 @@ Created on Tue Jun 13 19:01:05 2023
 @author: be
 """
 
+import math
 def calculate_max_height(v):
     theta = 90  # angle of projection (straight up)
     g = 32.2  # acceleration due to gravity in feet per second squared
